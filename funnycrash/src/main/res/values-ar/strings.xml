@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Mina George on 2020.
+  -->
+
+<resources>
+    <string name="app_name">Funny Crash</string>
+    <string name="def_excuse_msg">نأسف لهذه المشكلة المفاجئة\nلقد أنشأنا تقريرًا عن الخطأ يمكنك إرساله لمساعدتنا ، وسنتعامل مع هذا التقرير باعتباره سريًا ومجهول الهوية</string>
+    <string name="dont_send_btn">لا ترسل</string>
+    <string name="hint_report_description">يرجى أن يكون مفصل قدر الإمكان. ماذا تتوقع وما حدث بدلا من ذلك؟</string>
+    <string name="send_btn">إرسال</string>
+    <string name="title_help_us">ساعدنا في تحسين الخدمة</string>
+    <string name="title_report">الإبلاغ عن خطأ</string>
+</resources>

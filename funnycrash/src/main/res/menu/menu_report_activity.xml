@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Created by Mina George on 2020.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_send"
+        android:icon="@drawable/ic_send"
+        android:title="Send"
+        android:visible="true"
+        app:showAsAction="always|collapseActionView"/>
+</menu>

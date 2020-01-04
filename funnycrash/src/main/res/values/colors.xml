@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ Created by Mina George on 2020.
+  -->
+
+<resources>
+    <color name="colorPrimary">#3bb450</color>
+    <color name="colorPrimaryDark">#3bb450</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorBlack">#000</color>
+    <color name="whitesmoke">#f6f6f6</color>
+</resources>

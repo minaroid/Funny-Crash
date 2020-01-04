@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Funny Crash</string>
+    <string name="send_btn">Send</string>
+    <string name="dont_send_btn">Don\'t Send</string>
+    <string name="def_excuse_msg">Sorry for this sudden problem \n we have created an error report that you can send to help us, we will treat this report as confidential and anonymous</string>
+    <string name="title_report">Report a bug</string>
+    <string name="hint_report_description">Please be as detailed as possible. what did you expect and what happened instead ?</string>
+    <string name="title_help_us">Help us to improve the service.</string>
 </resources>

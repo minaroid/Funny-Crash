@@ -1,8 +1,9 @@
+/*
+ * Created by Mina George on 2020.
+ */
+
 package com.mina.funnycrash
 
-import android.content.Intent
-import android.os.Looper
-import android.util.Log
 
 class FunnyCrashExceptionHandler : Thread.UncaughtExceptionHandler {
 
@@ -10,17 +11,8 @@ class FunnyCrashExceptionHandler : Thread.UncaughtExceptionHandler {
         Thread.getDefaultUncaughtExceptionHandler()
 
     override fun uncaughtException(thread: Thread, throwable: Throwable) {
-
-        Log.d("minaCrash", throwable.localizedMessage)
-
-
-//      CrashUtil.saveCrashReport(throwable);
-
-
+        FunnyCrashUtils.saveCrashReport(throwable)
         exceptionHandler?.uncaughtException(thread, throwable)
-
     }
 
-
-    private fun isMainThread() = Looper.getMainLooper().thread == Thread.currentThread()
 }
