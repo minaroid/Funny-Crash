@@ -9,6 +9,7 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".FunnyCrashReportActivity"
+            android:theme="@style/ReportActivityTheme"
             android:label="@string/title_report"/>
 
     </application>
