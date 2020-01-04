@@ -6,5 +6,5 @@ package com.mina.funnycrash
 
 interface FunnyCrashReportListener {
 
-    fun onReceiveRepor(reportModel: ReportModel)
+    fun onReceiveReport(reportModel: ReportModel)
 }

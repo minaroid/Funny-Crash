@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         FunnyCrash.reportListener = object : FunnyCrashReportListener {
-            override fun onReceiveRepor(reportModel: ReportModel) {
+            override fun onReceiveReport(reportModel: ReportModel) {
                 Toast.makeText(this@MainActivity, reportModel.report, Toast.LENGTH_SHORT).show()
                 if (reportModel.reportType == FunnyCrashConstants.REPORT)
                     screenShot_imageView.setImageBitmap(BitmapFactory.decodeFile(reportModel.file?.absolutePath))

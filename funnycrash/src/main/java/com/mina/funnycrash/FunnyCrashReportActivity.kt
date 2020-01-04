@@ -70,9 +70,9 @@ class FunnyCrashReportActivity : AppCompatActivity() {
         else
             result.write("Description :  ${description_editText.text.toString().trim()}  \n\n")
 
-        result.write(FunnyCrashUtils.getDeviceDetails(this) + "\n\n")
+        result.write(FunnyCrashUtils.getDeviceDetails() + "\n\n")
         result.close()
-        FunnyCrash.reportListener?.onReceiveRepor(
+        FunnyCrash.reportListener?.onReceiveReport(
             ReportModel(
                 REPORT, result.toString(),
                 File(imagePath!!)
