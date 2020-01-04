@@ -70,7 +70,7 @@ class FunnyCrashReportActivity : AppCompatActivity() {
         else
             result.write("Description :  ${description_editText.text.toString().trim()}  \n\n")
 
-        result.write(FunnyCrashUtils.getDeviceDetails() + "\n\n")
+        result.write(FunnyCrashUtils.getDeviceDetails(FunnyCrash.applicationContext!!) + "\n\n")
         result.close()
         FunnyCrash.reportListener?.onReceiveReport(
             ReportModel(

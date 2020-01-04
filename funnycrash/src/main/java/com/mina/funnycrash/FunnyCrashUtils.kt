@@ -35,7 +35,7 @@ object FunnyCrashUtils {
                 Date()
             )} \n\n"
         )
-        result.write(getDeviceDetails() + "\n\n")
+        result.write(getDeviceDetails(FunnyCrash.applicationContext!!) + "\n\n")
         result.write("Stack Trace : \n")
         val printWriter = PrintWriter(result)
         e.printStackTrace(printWriter)
@@ -44,10 +44,10 @@ object FunnyCrashUtils {
         return crashLog
     }
 
-    public fun getDeviceDetails(): String {
+    public fun getDeviceDetails(context: Context): String {
 
         return ("Device Information : \n"
-                + "\nVERSION.NAME : " + BuildConfig.VERSION_NAME
+                + "\nVERSION.NAME : " + getAppVersionName(context)
                 + "\nVERSION.INCREMENTAL : " + Build.VERSION.INCREMENTAL
                 + "\nVERSION.SDK.NUMBER : " + Build.VERSION.SDK_INT
                 + "\nBRAND : " + Build.BRAND
@@ -57,5 +57,15 @@ object FunnyCrashUtils {
                 + "\nMANUFACTURER : " + Build.MANUFACTURER
                 + "\nMODEL : " + Build.MODEL
                 + "\nPRODUCT : " + Build.PRODUCT)
+    }
+
+    private fun getAppVersionName(context: Context): String {
+        return try {
+            val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
+
+            packageInfo.versionName
+        } catch (e: PackageManager.NameNotFoundException) {
+            throw RuntimeException("Could not get package name: $e")
+        }
     }
 }
