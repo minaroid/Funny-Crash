@@ -37,7 +37,7 @@ FunnyCrash.initialize(this)
 FunnyCrash.showExcuseDialog = false // default is true.
 
 ```
-### Setup the listener to receive crashes or reports in your mainActivity or your mainViewModel
+### Setup the listener to receive crashes or reports in your mainActivity or mainViewModel
 
 ```java
 
@@ -51,7 +51,7 @@ FunnyCrash.showExcuseDialog = false // default is true.
 ```
 
 ## License
-    Copyright (C) 2019 Mina George
+    Copyright (C) 2020 Mina George
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
