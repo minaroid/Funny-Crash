@@ -41,7 +41,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
     implementation 'androidx.lifecycle:lifecycle-extensions:2.1.0'
     implementation "androidx.lifecycle:lifecycle-runtime:2.0.0"
-
-    implementation "com.github.tarek360:instacapture:2.0.1"
+    implementation 'com.google.code.gson:gson:2.8.6'
 
 }

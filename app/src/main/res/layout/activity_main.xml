@@ -10,12 +10,21 @@
         android:id="@+id/btn_crash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello Crash!"
+        android:text="Hello Crash!!"
         android:padding="14dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/shakeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OR Shake your divice to report a bug. :("
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_crash"
+        app:layout_constraintStart_toStartOf="@id/btn_crash"/>
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/screenShot_imageView"
@@ -24,6 +33,6 @@
         android:layout_marginTop="25dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_crash" />
+        app:layout_constraintTop_toBottomOf="@id/shakeTextView" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

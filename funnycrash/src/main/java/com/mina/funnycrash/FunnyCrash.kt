@@ -110,14 +110,14 @@ object FunnyCrash : LifecycleObserver, Application.ActivityLifecycleCallbacks {
                         .clickListener(R.id.dont_send_btn) { dialog, _ -> dialog.dismiss() }
                         .clickListener(R.id.send_btn) { dialog, _ ->
                             dialog.dismiss()
-                            listener.onReceiveReport(ReportModel(CRASH, it, null))
+                            listener.onReceiveReport(it)
                         }
                         .background(R.drawable.inset_bottomsheet_background)
                         .cancelable(false)
                         .build()
                         .show()
                 } else {
-                    listener.onReceiveReport(ReportModel(CRASH, it, null))
+                    listener.onReceiveReport(it)
                 }
             }
 

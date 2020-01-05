@@ -23,8 +23,9 @@ class FunnyCrashReportActivity : AppCompatActivity() {
     private var imagePath: String? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         setContentView(R.layout.activity_report)
+
+        setSupportActionBar(toolbar)
         supportActionBar?.setDisplayShowTitleEnabled(true)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -58,23 +59,15 @@ class FunnyCrashReportActivity : AppCompatActivity() {
     }
 
     private fun onSendClicked() {
-        val result: Writer = StringWriter()
+        val date = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale("en")).format(Date())
 
-        result.write(
-            "Crash Data : ${SimpleDateFormat(
-                "yyyy-MM-dd HH:mm:ss", Locale("en")).format(Date())} \n\n"
-        )
+        val report = if (description_editText.text.toString().isEmpty()) "No description entered . "
+        else description_editText.text.toString().trim()
 
-        if (description_editText.text.toString().isEmpty())
-            result.write("Description : No description entered .  \n\n")
-        else
-            result.write("Description :  ${description_editText.text.toString().trim()}  \n\n")
+        val info = FunnyCrashUtils.getDeviceDetails(FunnyCrash.applicationContext!!)
 
-        result.write(FunnyCrashUtils.getDeviceDetails(FunnyCrash.applicationContext!!) + "\n\n")
-        result.close()
         FunnyCrash.reportListener?.onReceiveReport(
-            ReportModel(
-                REPORT, result.toString(),
+            ReportModel(REPORT, report, info, date,
                 File(imagePath!!)
             )
         )
