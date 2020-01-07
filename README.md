@@ -1,3 +1,5 @@
+[![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-Funny%20Crash-green.svg?style=flat )]( https://android-arsenal.com/details/1/8018 )
+
 # Funny Crash
 
 A simple Crash detector for Android apps that allows you to receive crashes from different devices or permit user to send a bug or feedback with screenshot when he shake his device.
